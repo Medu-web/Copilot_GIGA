@@ -33,6 +33,55 @@
             border-radius: 0.75rem;
             box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
         }
+
+        /* --- モーダル（拡大画像）のスタイル --- */
+        .modal-overlay {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            background-color: rgba(0, 0, 0, 0.7); /* 背景を半透明の黒に設定 */
+            display: none; /* 初期状態では非表示 */
+            justify-content: center;
+            align-items: center;
+            z-index: 1000;
+            cursor: pointer; /* オーバーレイ全体で閉じられることを示す */
+        }
+
+        /* 拡大画像自体 */
+        .modal-content {
+            max-width: 90%;
+            max-height: 90%;
+            box-shadow: 0 0 30px rgba(0, 0, 0, 0.5); /* 拡大画像には影を残し、浮き上がって見えるように */
+            border-radius: 0.5rem;
+            cursor: default; /* 画像の上ではカーソルをデフォルトに戻す */
+            background-color: white; /* 画像の周りを白く */
+            padding: 0.5rem; /* 画像と白枠の間に少し余白 */
+        }
+
+        /* 閉じるボタンのスタイル調整 */
+        .modal-close-button {
+            position: absolute;
+            top: 1rem;
+            right: 1rem;
+            background-color: rgba(0, 0, 0, 0.5); /* 閉じるボタンは視認性を保つため半透明の背景 */
+            color: white;
+            border-radius: 50%;
+            width: 2.5rem;
+            height: 2.5rem;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-size: 2rem;
+            line-height: 1;
+            cursor: pointer;
+            z-index: 1001;
+            transition: background-color 0.2s ease;
+        }
+        .modal-close-button:hover {
+            background-color: rgba(0, 0, 0, 0.7);
+        }
     </style>
 </head>
 <body class="text-gray-800">
@@ -148,7 +197,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="1.png" alt="Copilotによる小学2年生の算数の勉強方法のリストアップ画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                    <img src="1.png" alt="Copilotによる小学2年生の算数の勉強方法のリストアップ画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full cursor-pointer transition-transform hover:scale-[1.01]" onclick="openModal('1.png')">
                 </div>
             </div>
 
@@ -163,7 +212,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="2.png" alt="Copilotによる小学2年生向け算数クイズの生成と解答画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                    <img src="2.png" alt="Copilotによる小学2年生向け算数クイズの生成と解答画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full cursor-pointer transition-transform hover:scale-[1.01]" onclick="openModal('2.png')">
                 </div>
             </div>
             
@@ -178,7 +227,7 @@
                     </div>
                 </div>
                 <div class="md:w-1/2">
-                    <img src="3.png" alt="Copilotによる算数問題の出題と正解後のフィードバック画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                    <img src="3.png" alt="Copilotによる算数問題の出題と正解後のフィードバック画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full cursor-pointer transition-transform hover:scale-[1.01]" onclick="openModal('3.png')">
                 </div>
             </div>
 
@@ -220,5 +269,41 @@
         </div>
     </footer>
 
+    <!-- モーダルオーバーレイ -->
+    <!-- モーダル全体に onclick="closeModal()" を設定し、画像内のクリックイベントで伝播を停止することで、
+         背景部分をクリックしたときにモーダルが閉じるようにする -->
+    <div id="imageModal" class="modal-overlay" onclick="closeModal()">
+        <div class="relative w-full h-full flex justify-center items-center p-4">
+            <!-- 閉じるボタン -->
+            <button class="modal-close-button" aria-label="閉じる" onclick="closeModal()">
+                &times;
+            </button>
+            <!-- 拡大画像 -->
+            <!-- 画像自体をクリックした場合は event.stopPropagation() でモーダルが閉じないようにする -->
+            <img id="modalImage" class="modal-content object-contain" src="" alt="拡大画像" onclick="event.stopPropagation()">
+        </div>
+    </div>
+
+    <!-- JavaScript for Modal --><script>
+        // モーダルを開く関数
+        function openModal(imageSrc) {
+            const modal = document.getElementById('imageModal');
+            const modalImage = document.getElementById('modalImage');
+            modalImage.src = imageSrc;
+            modal.style.display = 'flex';
+            document.body.style.overflow = 'hidden'; // 背景のスクロールを停止
+        }
+
+        // モーダルを閉じる関数
+        function closeModal() {
+            const modal = document.getElementById('imageModal');
+            modal.style.display = 'none';
+            document.body.style.overflow = 'auto'; // 背景のスクロールを再開
+        }
+
+        // モーダルオーバーレイにonclick="closeModal()"が設定されているため、
+        // JavaScript側でのイベントリスナー追加は不要です。
+        // ただし、画像をクリックして閉じないように、HTML側でstopPropagation()を設定しています。
+    </script>
 </body>
 </html>
