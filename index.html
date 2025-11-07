@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GIGA端末に生成AI（Copilot, Geminiなど）が利用可能に：学校での活用を考える</title>
+    <!-- Tailwind CSS CDNを読み込み --><script src="https://cdn.tailwindcss.com"></script>
+    <!-- Interフォントの設定 --><style>
+        @import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+        body {
+            font-family: 'Inter', 'Noto Sans JP', sans-serif;
+            background-color: #f8fafc; /* Tailwind: slate-50 */
+        }
+        /* テーマカラーを変更 */
+        .section-gradient-1 {
+            background: linear-gradient(135deg, #4c1d95 0%, #a78bfa 100%); /* Violet-900 to Violet-400 (注意喚起と向き合うテーマカラー) */
+        }
+        .section-gradient-2 {
+            background: linear-gradient(135deg, #047857 0%, #34d399 100%); /* Emerald-700 to Emerald-300 */
+        }
+        .section-gradient-3 {
+            background: linear-gradient(135deg, #1d4ed8 0%, #60a5fa 100%); /* Blue-700 to Blue-400 */
+        }
+        .icon-size {
+            font-size: 2.5rem;
+            line-height: 1;
+        }
+        .pro-con-box {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1.5rem;
+            padding: 1rem;
+            border-radius: 0.75rem;
+            box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1), 0 2px 4px -2px rgba(0, 0, 0, 0.1);
+        }
+    </style>
+</head>
+<body class="text-gray-800">
+
+    <!-- 1. メインビジュアル/タイトルセクション (注意喚起を強調) --><header class="section-gradient-1 text-white p-8 md:p-16 rounded-b-2xl shadow-xl">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-lg md:text-xl mb-4 font-semibold opacity-90">技術はすでに現場にあります</p>
+            <h1 class="text-4xl md:text-6xl font-extrabold mb-4 tracking-tight">
+                GIGA端末で生成AIが<br class="md:hidden">利用可能になっています
+            </h1>
+            <h2 class="text-xl md:text-3xl font-light border-t pt-4 border-white border-opacity-30 inline-block">
+                【教職員・保護者の皆様へ】CopilotやGeminiなど、学校としてAIとどう向き合うか
+            </h2>
+        </div>
+    </header>
+
+    <!-- 2. 導入セクション --><main class="max-w-6xl mx-auto px-4 py-12 md:py-20">
+        <div class="text-center mb-16">
+            <div class="inline-block p-3 rounded-full bg-purple-700 text-white shadow-lg">
+                <span class="icon-size">⚠️</span>
+            </div>
+            <p class="text-2xl md:text-3xl font-bold mt-4 mb-3 text-purple-900">
+                自治体の方針にかかわらず、学校はAIと向き合う必要があります
+            </p>
+            <p class="text-lg md:text-xl text-gray-600 max-w-3xl mx-auto">
+                市内のGIGA端末では、設定上Microsoft Copilot<b>に加え、ChromeブラウザなどからGoogleのAI（Geminiなど）</b>の利用も技術的に可能となっています。
+                自治体としての統一的な方針は現在未決定ですが、生成AIは生徒の学習環境に既に存在しています。
+                学校・先生方には、<b>技術への正確な理解</b>と<b>適切な利用指導</b>が求められます。
+            </p>
+        </div>
+
+        <!-- 3. 生成AIの光と影（明快な説明図解）セクション --><section class="section-gradient-3 text-white p-8 md:p-12 rounded-xl shadow-xl mb-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 border-b pb-4 border-white border-opacity-30">
+                💡 先生方へ：児童生徒に伝える「生成AIの光と影」
+            </h2>
+            
+            <div class="grid md:grid-cols-2 gap-6">
+                <!-- メリット（光） --><div>
+                    <h3 class="text-2xl font-bold mb-4 text-sky-200 flex items-center">
+                        <span class="icon-size mr-3">☀️</span> メリット（光）：創造性を伸ばす道具
+                    </h3>
+                    
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-green-500">
+                        <span class="text-xl mr-3 text-green-600">🚀</span>
+                        <div class="flex-1">
+                            <p class="font-bold">アイデア創出・探究の深化</p>
+                            <p class="text-sm">ブレインストーミングの相手や、多角的な視点を提供し、探究活動の質を高めることができます。</p>
+                        </div>
+                    </div>
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-green-500">
+                        <span class="text-xl mr-3 text-green-600">📘</span>
+                        <div class="flex-1">
+                            <p class="font-bold">個別最適な学習サポート</p>
+                            <p class="text-sm">苦手な単元の解説、理解度チェックのための問題生成など、自分専用のペースメーカーになります。</p>
+                        </div>
+                    </div>
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-green-500">
+                        <span class="text-xl mr-3 text-green-600">📝</span>
+                        <div class="flex-1">
+                            <p class="font-bold">文章構成・要約の効率化</p>
+                            <p class="text-sm">作成した文章の校正や、長文のポイント抽出をサポートし、思考を整理する時間を増やせます。</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- デメリット（影） --><div>
+                    <h3 class="text-2xl font-bold mb-4 text-red-200 flex items-center">
+                        <span class="icon-size mr-3">🌑</span> デメリット（影）：リスクと向き合う
+                    </h3>
+                    
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-red-500">
+                        <span class="text-xl mr-3 text-red-600">❌</span>
+                        <div class="flex-1">
+                            <p class="font-bold">ハルシネーション（誤情報）</p>
+                            <p class="text-sm">AIは時に、事実ではない情報を自信満々に生成します。常に「情報の真偽を確かめる力」が必要です。</p>
+                        </div>
+                    </div>
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-red-500">
+                        <span class="text-xl mr-3 text-red-600">🕳️</span>
+                        <div class="flex-1">
+                            <p class="font-bold">思考力・意欲の低下</p>
+                            <p class="text-sm">すぐに答えを求めると、自分で考える機会を奪い、学習意欲や問題解決能力の成長を妨げます。</p>
+                        </div>
+                    </div>
+                    <div class="pro-con-box bg-white text-gray-800 border-l-4 border-red-500">
+                        <span class="text-xl mr-3 text-red-600">⚖️</span>
+                        <div class="flex-1">
+                            <p class="font-bold">著作権・倫理的な問題</p>
+                            <p class="text-sm">著作権侵害や個人情報漏洩のリスクがあります。インターネット上の情報を扱うモラル教育が不可欠です。</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+
+        <!-- 4. 児童生徒がアクセス可能な機能例（画像で見るCopilot）セクション --><section class="section-gradient-2 text-white p-8 md:p-12 rounded-xl shadow-xl">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10">
+                📱 端末で利用可能な生成AIの機能例（Copilotなど）
+            </h2>
+            <p class="text-center text-lg mb-8 opacity-80">
+                ＜注意＞これらの機能はすでに生徒が使える状態にあります。指導の際は、利便性と同時に「<b>なぜ自分で考える必要があるのか</b>」を伝えてください。
+            </p>
+            
+            <!-- 活用例 1: 学習計画と内容の整理 --><div class="bg-white text-gray-800 p-6 md:p-8 rounded-xl shadow-2xl mb-8 flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <p class="text-lg font-semibold text-green-600 mb-2">機能例 1：学習内容のリストアップ</p>
+                    <h3 class="text-2xl font-bold mb-4">単元全体の構造化をサポート</h3>
+                    <p class="text-gray-700">単元や学年を指定すると、Copilotが学習すべき主要な項目をリストアップします。これは「<b>探究の入り口</b>」として活用できますが、「<b>出力されたものを鵜呑みにせず、何を深く調べるか考える力</b>」が必要です。</p>
+                    <div class="mt-4 text-sm font-medium text-gray-500">
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full">小学2年生</span>
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full ml-2">算数の勉強方法</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://github.com/Medu-ewb/Copilot_GIGA/raw/main/1.png" alt="Copilotによる小学2年生の算数の勉強方法のリストアップ画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                </div>
+            </div>
+
+            <!-- 活用例 2: 個別最適な問題生成 --><div class="bg-white text-gray-800 p-6 md:p-8 rounded-xl shadow-2xl mb-8 flex flex-col md:flex-row-reverse items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pl-8">
+                    <p class="text-lg font-semibold text-green-600 mb-2">機能例 2：問題の即時生成</p>
+                    <h3 class="text-2xl font-bold mb-4">演習の補強と即座な解答・解説</h3>
+                    <p class="text-gray-700">「算数クイズを5問出して」など、要望に合わせた問題をすぐに生成します。「<b>利便性が高い</b>」一方で、これを「<b>宿題の答えのカンニング</b>」に利用しないよう、「<b>倫理観</b>」と「<b>利用ルール</b>」の指導が必要です。</p>
+                    <div class="mt-4 text-sm font-medium text-gray-500">
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full">算数クイズ</span>
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full ml-2">四択形式</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://github.com/Medu-ewb/Copilot_GIGA/raw/main/2.png" alt="Copilotによる小学2年生向け算数クイズの生成と解答画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                </div>
+            </div>
+            
+            <!-- 活用例 3: 即座なフィードバックと演習 (画像 3 は機能 2 の続きとして活用) --><div class="bg-white text-gray-800 p-6 md:p-8 rounded-xl shadow-2xl flex flex-col md:flex-row items-center">
+                <div class="md:w-1/2 mb-6 md:mb-0 md:pr-8">
+                    <p class="text-lg font-semibold text-green-600 mb-2">機能例 3：即時フィードバック</p>
+                    <h3 class="text-2xl font-bold mb-4">即座な正誤判定と次の問題への誘導</h3>
+                    <p class="text-gray-700">問題を解いた後、すぐに正解かどうかのフィードバックと、次の学習を促す指示が得られます。先生方は、この機能が生徒の「<b>わかったつもり</b>」を生まないよう、「<b>なぜ正解・不正解だったのかを言語化させる指導</b>」に重点を置く必要があります。</p>
+                    <div class="mt-4 text-sm font-medium text-gray-500">
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full">掛け算・引き算</span>
+                        <span class="inline-block px-3 py-1 bg-gray-100 rounded-full ml-2">即時採点</span>
+                    </div>
+                </div>
+                <div class="md:w-1/2">
+                    <img src="https://github.com/Medu-ewb/Copilot_GIGA/raw/main/3.png" alt="Copilotによる算数問題の出題と正解後のフィードバック画面" class="rounded-lg shadow-lg border-4 border-gray-100 w-full">
+                </div>
+            </div>
+
+        </section>
+
+        <!-- 5. 先生方の役割と指導のポイント --><section class="py-12 md:py-16">
+            <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-purple-800">
+                🏫 先生方へ：生成AI時代に求められる指導
+            </h2>
+            <div class="grid md:grid-cols-3 gap-8 text-center">
+                
+                <div class="p-6 rounded-xl bg-purple-50 shadow-md border-b-4 border-purple-500">
+                    <div class="icon-size mx-auto mb-3 text-purple-600">🛡️</div>
+                    <h3 class="text-xl font-bold mb-2">AIリテラシーの育成</h3>
+                    <p class="text-gray-700 text-sm">AIが生成した情報の「真偽を検証する力」や、「盗用（カンニング）と適切な活用」の境界線を明確に指導します。</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-purple-50 shadow-md border-b-4 border-purple-500">
+                    <div class="icon-size mx-auto mb-3 text-purple-600">🤝</div>
+                    <h3 class="text-xl font-bold mb-2">生成AIとの共創学習</h3>
+                    <p class="text-gray-700 text-sm">AIを「答えを出す機械」ではなく「思考を深めるための道具・パートナー」として活用する指導法を確立します。</p>
+                </div>
+
+                <div class="p-6 rounded-xl bg-purple-50 shadow-md border-b-4 border-purple-500">
+                    <div class="icon-size mx-auto mb-3 text-purple-600">🗣️</div>
+                    <h3 class="text-xl font-bold mb-2">倫理観と情報モラル</h3>
+                    <p class="text-gray-700 text-sm">著作権やプライバシー、ネット上のマナーなど、AIの利用を通じて情報社会における責任ある行動を教えます。</p>
+                </div>
+            </div>
+        </section>
+
+    </main>
+
+    <!-- 6. フッター --><footer class="bg-gray-800 text-white p-4 mt-12">
+        <div class="max-w-4xl mx-auto text-center">
+            <p class="text-xs opacity-60">
+                ICT支援員作成資料
+            </p>
+        </div>
+    </footer>
+
+</body>
+</html>
